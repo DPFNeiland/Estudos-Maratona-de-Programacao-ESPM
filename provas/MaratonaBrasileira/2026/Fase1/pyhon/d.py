@@ -7,9 +7,11 @@ def ele_mesmo(mapa: list[list], inverso: list[list], n, m):
     return True
 
 def cabeca_pra_baixo(mapa: list[list], inverso: list[list], n, m):
+    inversa = inverso[::-1]
+
     for i in range(n):
         for j in range(m):
-            if mapa[i][j] != inverso[n-i-1][m-j-1]:
+            if mapa[i][j] != inversa[i][j]:
                 return False
 
     return True
